@@ -157,16 +157,16 @@ twinkeep/
 
 ## 개발 Phase
 
-### Phase 1 — 데이터 레이어 (현재)
+### Phase 1 — 데이터 레이어 ✅ 완료
 목표: Omniverse 없이도 동작하는 기기 등록·상태·소유권 API
 
-- [ ] FastAPI 프로젝트 뼈대 + Docker Compose
-- [ ] Entity/Space/Device/Agent PostgreSQL 스키마
-- [ ] Redis 상태 레이어
-- [ ] WebSocket 실시간 상태 스트림
-- [ ] 기기 등록 API + JWT 인증
-- [ ] 폰 에이전트 → API 연결 (MAUI 재활용)
-- [ ] 보안 Level 1: 스키마-데이터 분리
+- [x] FastAPI 프로젝트 뼈대 + Docker Compose (Podman)
+- [x] Entity/Space/Device/Agent PostgreSQL 스키마
+- [x] Redis 상태 레이어 (보안 Level 1: 정규화된 값 배열)
+- [x] WebSocket 실시간 상태 스트림 (/ws/devices)
+- [x] 기기 등록 API
+- [ ] 폰 에이전트 → API 연결 (MAUI 재활용) ← Phase 3로 이동
+- [ ] JWT 인증 ← Phase 3로 이동
 
 ### Phase 2 — Omniverse 연결
 - [ ] USD Composer로 집 씬 생성
@@ -186,10 +186,12 @@ twinkeep/
 
 ## 오늘의 시작점
 
-**2026-04-18**: 프로젝트 완전 초기화 완료.
-- GitHub `wonjinsoft/twinkeep` 레포 재생성 완료
-- 로컬 `C:\Projects\twinkeep` 폴더 구조 생성 완료
-- 다음 작업: Phase 1 — FastAPI 뼈대 + Docker Compose 구성
+**2026-04-18**: Phase 1 완료.
+- GitHub `wonjinsoft/twinkeep` 재생성, 새 아키텍처로 초기화
+- FastAPI + PostgreSQL + Redis + WebSocket 구현 완료
+- Podman으로 로컬 실행 중 (`podman-compose up -d`)
+- 테스트 파일: `test_ws.py` (WebSocket 수신), `test_state.py` (상태 갱신)
+- 다음 작업: Phase 2 — Omniverse Kit SDK 설치 + Kit Extension 개발
 
 ---
 
