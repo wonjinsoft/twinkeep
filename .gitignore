@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+.env
+.env.*
+*.egg-info/
+dist/
+build/
+
+# Node
+node_modules/
+dist/
+.next/
+.nuxt/
+
+# IDE
+.vscode/
+.idea/
+*.suo
+*.user
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Omniverse
+.nvidia-omniverse/
+
+# Secrets
+*.pem
+*.key
+secrets/
+
+# Local schema (보안: 서버에 올리지 않음)
+schemas/local/
